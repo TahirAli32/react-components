@@ -1,6 +1,6 @@
 # React Components
 
-This Repo will contain all the components which can be used on any other React website.
+This Repository will contain all the components which can be used on any other React website.
 
 Styled Components is used for styling. 
 
