@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
@@ -6,10 +7,11 @@ const Navbar = () => {
   return (
     <Container>
         <ul>
-            <li><Link to="/"><a href='#'>Home</a></Link></li>
-            <li><Link to="/cart"><a href='#'>Cart</a></Link></li>
-            <li><Link to="/products"><a href='#'>Products</a></Link></li>
-            <li><Link to="/login"><a href='#'>Login</a></Link></li>
+            <a><li><Link to="/">Home</Link></li></a>
+            <a><li><Link to="/cart">Cart</Link></li></a>
+            <a><li><Link to="/products">Products</Link></li></a>
+            <a><li><Link to="/login">Login</Link></li></a>
+            <a><li><Link to="/dropdown">Dropdown Header</Link></li></a>
         </ul>
     </Container>
   )
@@ -22,16 +24,20 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #97dbf149;
+    background-color: #000000;
     font-size: 25px;
     height: 10vh;
     text-transform: uppercase;
+    a{
+      color: #23b0df;
+      :hover{
+        color: #0390be;
+      }
+    }
     li{
       margin: 0 20px;
-      color: red;
       :hover{
-        color: #014f69;
-        border-bottom: .1rem solid #039fd3;
+        border-bottom: .001rem solid #005f96;
       }
     }
   }

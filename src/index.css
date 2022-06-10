@@ -13,3 +13,25 @@ a{
 ul{
   list-style: none;
 }
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.App > h2{
+  margin-bottom: 1rem;
+}
+.components{
+  padding: 10rem;
+  border: 0.02rem solid #d1cece;
+  border-radius: 3px;
+}
+.components > li {
+  padding: 5px 0;
+}
+.components > li  > a{
+  color: rgb(0, 115, 192);
+  font-size: 18px;
+}

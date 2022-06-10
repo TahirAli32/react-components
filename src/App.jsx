@@ -1,23 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { Cart, Login, Home, Products, DropdownHeader, Navbar } from './components'
 
-const App = () => {
+function App() {
+
+  const location = useLocation()
+
   return (
-    <div>
-        <h2>These are React Components</h2>
-        <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/cart">Cart</Link></li>
-            <li><Link to="/products">Products</Link></li>
-            <li><Link to="/login">Login</Link></li>
-        </ul>
-    </div>
+    <>
+      {location.pathname !== '/' && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/dropdown" element={<DropdownHeader />} />
+      </Routes>
+    </>
   )
 }
 
 export default App
-
-const Container = styled.div`
-  background-color: #aaaaf5;
-`
