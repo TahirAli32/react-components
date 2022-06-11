@@ -10,6 +10,8 @@ const Home = () => {
               <li><Link to="/products">Products</Link></li>
               <li><Link to="/login">Login</Link></li>
               <li><Link to="/dropdown">Dropdown Header</Link></li>
+              <li><Link to="/tabs">Tabs</Link></li>
+              <li><Link to="/modal">Modal Popup</Link></li>
           </ul>
       </div>
   )

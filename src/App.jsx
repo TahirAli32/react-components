@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { Cart, Login, Home, Products, DropdownHeader, Navbar } from './components'
+import { Cart, Login, Home, Products, DropdownHeader, Navbar, Modal, Tabs } from './components'
 
 function App() {
 
@@ -15,6 +15,8 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />
         <Route path="/dropdown" element={<DropdownHeader />} />
+        <Route path="/modal" element={<Modal />} />
+        <Route path="/tabs" element={<Tabs />} />
       </Routes>
     </>
   )
