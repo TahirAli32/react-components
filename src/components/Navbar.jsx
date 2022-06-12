@@ -9,6 +9,8 @@ const Navbar = () => {
       <li><Link to="/cart">Cart</Link></li>
       <li><Link to="/products">Products</Link></li>
       <li><Link to="/login">Login</Link></li>
+      <li><Link to="/signup">Signup</Link></li>
+      <li><Link to="/slider">Slider</Link></li>
       <li><Link to="/dropdown">Dropdown Header</Link></li>
       <li><Link to="/modal">Modal Popup</Link></li>
       <li><Link to="/tabs">Tabs</Link></li>
@@ -25,6 +27,7 @@ const Ul = styled.ul`
   background-color: #000000;
   font-size: 20px;
   min-height: 10vh;
+  overflow-x: hidden;
   text-transform: uppercase;
   li{
     margin: 0 20px;
