@@ -20,7 +20,7 @@ const Login = () => {
   const passwordRef = useRef("");
 
   const togglePassword = () => {
-    setViewPassword(!viewPassword ? true : false)
+    setViewPassword(!viewPassword)
   }
 
   const handleEmail = () => {
@@ -79,7 +79,7 @@ const Login = () => {
               </div>
               <p className='forgotPw'>Forgot Password?</p>
             </div>
-            <button className='btn btn-pw' onClick={handlePassword}>Login</button>
+            <button className='btn' style={{marginTop: '1.5rem'}} onClick={handlePassword}>Login</button>
           </div>
         }
       </div>
@@ -113,7 +113,7 @@ const Main = styled.div`
         border: 1px solid #05ac05;
         color: #05ac05;
         :hover{
-          background-color: #e6e1e14b;
+          background-color: #e6e1e16a;
         }
       }
     }
