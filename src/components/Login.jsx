@@ -33,7 +33,7 @@ const Login = () => {
     setError(false)
   }
 
-  const handlePassword = () => {
+  const handleLogin = () => {
     if(passwordRef.current.value === ""){
       setError(true)
       return
@@ -79,7 +79,7 @@ const Login = () => {
               </div>
               <p className='forgotPw'>Forgot Password?</p>
             </div>
-            <button className='btn' style={{marginTop: '1.5rem'}} onClick={handlePassword}>Login</button>
+            <button className='btn' style={{marginTop: '1.5rem'}} onClick={handleLogin}>Login</button>
           </div>
         }
       </div>
@@ -98,8 +98,7 @@ const Main = styled.div`
   .login{
     border: 0.1rem solid #bdb5b5;
     border-radius: 3px;
-    padding: 1rem 8rem;
-    min-height: 50vh;
+    padding: 3rem 8rem;
     .email-login > .sign-up{
       text-align: center;
       padding-top: 1rem;
