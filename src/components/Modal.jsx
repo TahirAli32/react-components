@@ -13,8 +13,7 @@ const Modal = () => {
   return (
     <Main>
       <button className='btn' onClick={handleModal}>Show Modal</button>
-
-      {!modal &&
+      {modal &&
         <div className='modal'>
           <div className="modalContainer">
             <div className="modalHeader">
