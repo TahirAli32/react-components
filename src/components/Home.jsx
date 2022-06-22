@@ -6,14 +6,14 @@ const Home = () => {
     <div className="App">
           <h2>Components that are Completed</h2>
           <ul className='components'>
-            <li><Link to="/cart">Cart</Link></li>
-            <li><Link to="/products">Products</Link></li>
             <li><Link to="/login">Login</Link></li>
             <li><Link to="/signup">Signup</Link></li>
             <li><Link to="/slider">Slider</Link></li>
+            <li><Link to="/modal">Modal Popup</Link></li>
+            <li><Link to="/cart">Cart</Link></li>
+            <li><Link to="/products">Products</Link></li>
             <li><Link to="/dropdown">Dropdown Header</Link></li>
             <li><Link to="/tabs">Tabs</Link></li>
-            <li><Link to="/modal">Modal Popup</Link></li>
           </ul>
       </div>
   )

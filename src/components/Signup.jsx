@@ -2,9 +2,11 @@ import React, { useRef, useState } from 'react'
 import styled from 'styled-components'
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import { MdError } from 'react-icons/md'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Signup = () => {
+
+  const navigate = useNavigate()
 
   const [viewPassword, setViewPassword] = useState(false)
   const [error, setError] = useState(false)
@@ -19,15 +21,16 @@ const Signup = () => {
       setError(true)
       return
     }
-    console.log(emailRef.current.value)
-    // setPassword(passwordRef.current.value)
     setError(false)
+    navigate('/cart')
   }
 
   return (
     <Main>
       <div className="signup">
         <h6>Create a Free Account</h6>
+        {error && <div className='error'><span><MdError /></span>All fields are required</div>}
+        {/* <div className={error ? 'inputField errorBox' : 'inputField'}> */}
         <div className="inputField">
           <input ref={nameRef} id='name' placeholder=" " className='inputBox' type="text" />
           <label for="name" className='inputLabel'>Full Name</label>
@@ -50,9 +53,8 @@ const Signup = () => {
           <label for='tos'>I agree to the Terms of Use and Privacy Policy</label>
         </div>
         <button className='btn' onClick={handleSignUp} style={{ marginTop: '1.5rem' }}>Sign Up</button>
-        <p>Already have an account? <Link to="/login">Log In</Link></p>
+        <p className="logIn">Already have an account? <Link to="/login">Log In</Link></p>
       </div>
-      {error && <div className='error'><span><MdError /></span>All fields are required</div>}
     </Main>
   )
 }
@@ -68,7 +70,7 @@ const Main = styled.div`
   .signup{
     border: 0.1rem solid #bdb5b5;
     border-radius: 3px;
-    padding: 5rem 8rem;
+    padding: 4rem 8rem;
     h6{
       font-size: 25px;
       margin-bottom: 1.5rem;
@@ -82,7 +84,7 @@ const Main = styled.div`
       border-radius: 4px;
       width: 450px;
       height: 40px;
-      margin-top: 1rem;
+      margin-top: .8rem;
         .inputLabel{
           position: absolute;
           color: gray;
@@ -125,6 +127,9 @@ const Main = styled.div`
         }
       }
     }
+    .errorBox, .errorBox:focus-within, .errorBox:hover{
+      border-color: #b92821;
+    }
     .disclaimer{
       text-align: center;
       font-weight: 500;
@@ -143,18 +148,18 @@ const Main = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 1px;
       color: #b92821;
-      font-size: 14px; 
-      height: max-content;
+      font-size: 17px; 
       span{
-        font-size: 17px;
-        margin: 2px 3px auto 0;
+        font-size: 18px;
+        margin: 2px 3px 0 0;
       }
     }
-    p{
-      margin-top: 1.5rem;
+    .logIn{
+      border-top: 0.1rem solid #bdb5b5;
+      margin-top: 1rem;
       text-align: center;
+      padding-top: 1rem;
       color: #636b6a;
       a{
         color: #05ac05;
