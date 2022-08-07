@@ -64,7 +64,7 @@ const Main = styled.main`
     justify-content: center;
     align-items: center;
     background-color: rgba(200, 200, 200, 0.5);
-    animation: opacity 0.2s ease;
+    animation: opacity 0.2s;
     .modalContainer{
       border-radius: 3px;
       background-color: white;

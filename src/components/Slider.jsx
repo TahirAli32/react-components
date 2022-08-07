@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const Slider = () => {
 
-    let sliderData = [ 'bg.jpg', 'pic1.jpeg', 'pic2.jpeg', 'pic3.jpeg', 'pic4.jpeg' ]
+    let sliderData = [ 'assets/slider/bg.jpg', 'assets/slider/pic1.jpeg', 'assets/slider/pic2.jpeg', 'assets/slider/pic3.jpeg', 'assets/slider/pic4.jpeg' ]
     const [current, setCurrent] = useState(0)
 
     let length = sliderData.length
@@ -30,13 +30,14 @@ const Slider = () => {
             <div className='rightArrow arrow'>
                 <BsFillArrowRightCircleFill onClick={() => nextSlide()} />
             </div>
-            {sliderData.map((slide, index) => (
+            {/* {sliderData.map((slide, index) => (
                 <div className={index === current ? 'slide active' : 'slide'} key={index}>
                     {index === current &&
                         <img src={`/${slide}`} width="800px" height="450px" style={{borderRadius: '5px'}} alt="Slider Pic" />
                     }
-                </div>
-            ))}
+                    </div>
+                ))} */}
+            <img src={sliderData[current]} width="800px" height="450px" style={{borderRadius: '5px'}} alt="Slider Pic" />
             <div className='dots'>
                 {Array.from({length: length}).map((item,index) => (
                     <div key={index} onClick={() => moveDots(index)} className={current === index ? 'dot active' : 'dot'}></div>
