@@ -94,7 +94,7 @@ const Main = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  min-height: 90vh;
   .login{
     border: 0.1rem solid #bdb5b5;
     border-radius: 3px;
