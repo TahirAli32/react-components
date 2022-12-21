@@ -12,6 +12,7 @@ const Home = () => {
             <li><Link to="/modal">Modal Popup</Link></li>
             <li><Link to="/cart">Cart</Link></li>
             <li><Link to="/product">Product</Link></li>
+            <li><Link to="/carousel">Carousel</Link></li>
             <li><Link to="/dropdown">Dropdown Header</Link></li>
             <li><Link to="/tabs">Tabs</Link></li>
           </ul>

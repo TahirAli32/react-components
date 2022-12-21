@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { Cart, Login, Slider, Signup,  Home, Product, DropdownHeader, Navbar, Modal, Tabs } from './components'
+import { Cart, Login, Slider, Signup,  Home, Product, DropdownHeader, Navbar, Modal, Tabs, Carousel } from './components'
 
 function App() {
 
@@ -9,7 +9,6 @@ function App() {
   return (
     <>
       {location.pathname !== '/' && <Navbar /> }
-      {/* {location.pathname !== '/product' && <Navbar />} */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -20,6 +19,7 @@ function App() {
         <Route path="/slider" element={<Slider />} />
         <Route path="/modal" element={<Modal />} />
         <Route path="/tabs" element={<Tabs />} />
+        <Route path="/carousel" element={<Carousel />} />
       </Routes>
     </>
   )
