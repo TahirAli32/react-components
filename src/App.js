@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { Cart, Login, Slider, Signup,  Home, Product, DropdownHeader, Navbar, Modal, Tabs, Carousel } from './components'
+import { Cart, Login, Slider, Signup,  Home, Product, DropdownHeader, Navbar, Modal, Tabs, Carousel, Loader } from './components'
 
 function App() {
 
@@ -20,6 +20,7 @@ function App() {
         <Route path="/modal" element={<Modal />} />
         <Route path="/tabs" element={<Tabs />} />
         <Route path="/carousel" element={<Carousel />} />
+        <Route path="/loader" element={<Loader />} />
       </Routes>
     </>
   )

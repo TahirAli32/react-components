@@ -15,6 +15,7 @@ const Home = () => {
             <li><Link to="/carousel">Carousel</Link></li>
             <li><Link to="/dropdown">Dropdown Header</Link></li>
             <li><Link to="/tabs">Tabs</Link></li>
+            <li><Link to="/loader">Loader</Link></li>
           </ul>
       </div>
   )

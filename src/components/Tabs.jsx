@@ -7,7 +7,6 @@ const Tabs = () => {
 
   return (
     <Container>
-
       <div className="tabsHeading">
         <div className="tabs activeTab">Tab 1</div>
         <div className="tabs">Tab 2</div>
@@ -27,8 +26,6 @@ const Tabs = () => {
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse aspernatur, sit in consequuntur beatae earum.</p>
         </div>
       </div>
-
-
     </Container>
   )
 }
@@ -36,7 +33,6 @@ const Tabs = () => {
 export default Tabs
 
 const Container = styled.div`
-.container {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -46,74 +42,66 @@ const Container = styled.div`
   margin: 100px auto 0;
   word-break: break-all;
   border: 1px solid rgba(0, 0, 0, 0.274);
-}
-
-.bloc-tabs {
-  display: flex;
-}
-.tabs {
-
-  padding: 15px;
-  text-align: center;
-  width: 50%;
-  background: rgba(128, 128, 128, 0.075);
-  cursor: pointer;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
-  box-sizing: content-box;
-  position: relative;
-  outline: none;
-}
-.tabs:not(:last-child){
-  border-right: 1px solid rgba(0, 0, 0, 0.274);
-}
-
-.active-tabs  {
-  background: white;
-  border-bottom: 1px solid transparent;
-}
-
-.active-tabs::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% + 2px);
-  height: 5px;
-  background: rgb(88, 147, 241);
-}
-
-
-
-button {
-  border: none;
-  
-}
-.content-tabs {
-  flex-grow : 1;
-}
-.content {
-  background: white;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-.content h2 {
-  padding: 0px 0 5px 0px;
-}
-.content hr {
-  width: 100px;
-  height: 2px;
-  background: #222;
-  margin-bottom: 5px;
-}
-.content p {
-  width: 100%;
-  height: 100%;
-}
-.active-content {
-  display: block;
-}
+  .bloc-tabs {
+    display: flex;
+  }
+  .tabs {
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+    background: rgba(128, 128, 128, 0.075);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+  }
+  .tabs:not(:last-child){
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+  }
+  .activeTab  {
+    background: white;
+    border-bottom: 1px solid transparent;
+  }
+  .activeTab::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 5px;
+    background: rgb(88, 147, 241);
+  }
+  button {
+    border: none;
+    
+  }
+  .tabsContent {
+    flex-grow : 1;
+  }
+  .content {
+    background: white;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .content h2 {
+    padding: 0px 0 5px 0px;
+  }
+  .content hr {
+    width: 100px;
+    height: 2px;
+    background: #222;
+    margin-bottom: 5px;
+  }
+  .content p {
+    width: 100%;
+    height: 100%;
+  }
+  .activeContent {
+    display: block;
+  }
 `
